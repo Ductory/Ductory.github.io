@@ -6,15 +6,15 @@
   
   <title>Hello World | Ductory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Qui">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="https://ductory.github.io/2022/12/26/hello-world/index.html">
 <meta property="og:site_name" content="Ductory">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Qui">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-26T04:24:13.847Z">
-<meta property="article:modified_time" content="2022-12-26T04:24:13.847Z">
+<meta property="article:modified_time" content="2023-04-29T16:49:16.132Z">
 <meta property="article:author" content="Dangfer">
 <meta name="twitter:card" content="summary">
   
@@ -95,7 +95,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+        <span id="more"></span>
+
+<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -112,8 +114,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ductory.github.io/2022/12/26/hello-world/" data-id="clc4xmrdr0001d8gw73202h1h" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://ductory.github.io/2022/12/26/hello-world/" data-id="clh252zl700019gf58tlibop7" data-title="Hello World" class="article-share-link">Share</a>
       
+      
+        <a href="/2022/12/26/hello-world/#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/2022/12/26/hello-world/" itemprop="commentCount"></span>
+          Comments
+        </a>
       
       
     </footer>
@@ -138,6 +145,10 @@
 </article>
 
 
+
+  <section id="comments" class="vcomment">
+
+  </section>
 </section>
         
           <aside id="sidebar">
@@ -187,7 +198,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2022 Dangfer<br>
+      &copy; 2023 Dangfer<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -219,6 +230,29 @@
 
 
 
+
+  
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "uPQEFP44IIlVlOazxhqd485r-MdYXbMMI",
+        appKey: "mh5QvSOkwCVQx56uYPZTKNCe",
+        placeholder: "Say something...",
+        pageSize:'10',
+        avatar:'mm',
+        lang:'zh-cn'
+    });
+</script>
 
   </div>
 </body>
