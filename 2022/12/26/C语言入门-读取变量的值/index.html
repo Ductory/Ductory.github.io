@@ -6,16 +6,17 @@
   
   <title>C语言入门 读取变量的值 | Ductory</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="题目：已知main函数中有一个变量i，我们想要读取它的值并输出。 不得不说，这是一道相当难的题目，可能会难倒一大片刚学C语言的新手。但是不要怕，这道题目其实没有我们想象中的那么难。就算我们现在什么也不知道，我们也可以先写出一个模板： 1234567#include &lt;stdio.h&gt;int main()&amp;#123;    int i &#x3D; 12345;    &#x2F;&#x2F;...    ret">
+  <meta name="description" content="Just kidding">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言入门 读取变量的值">
 <meta property="og:url" content="https://ductory.github.io/2022/12/26/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8-%E8%AF%BB%E5%8F%96%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/index.html">
 <meta property="og:site_name" content="Ductory">
-<meta property="og:description" content="题目：已知main函数中有一个变量i，我们想要读取它的值并输出。 不得不说，这是一道相当难的题目，可能会难倒一大片刚学C语言的新手。但是不要怕，这道题目其实没有我们想象中的那么难。就算我们现在什么也不知道，我们也可以先写出一个模板： 1234567#include &lt;stdio.h&gt;int main()&amp;#123;    int i &#x3D; 12345;    &#x2F;&#x2F;...    ret">
+<meta property="og:description" content="Just kidding">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-26T14:38:23.000Z">
-<meta property="article:modified_time" content="2023-04-29T15:42:08.428Z">
+<meta property="article:modified_time" content="2023-05-01T07:29:39.637Z">
 <meta property="article:author" content="Dangfer">
+<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Ductory" type="application/atom+xml">
@@ -25,6 +26,8 @@
   
   
     
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
   
   
 <link rel="stylesheet" href="/css/style.css">
@@ -93,9 +96,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <span id="more"></span>
-
-<p><strong>题目：</strong>已知<code>main</code>函数中有一个变量<code>i</code>，我们想要读取它的值并输出。</p>
+        <p><strong>题目：</strong>已知<code>main</code>函数中有一个变量<code>i</code>，我们想要读取它的值并输出。</p>
 <p>不得不说，这是一道相当难的题目，可能会难倒一大片刚学C语言的新手。但是不要怕，这道题目其实没有我们想象中的那么难。就算我们现在什么也不知道，我们也可以先写出一个模板：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">12345</span>;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -131,9 +132,21 @@
         </a>
       
       
+  
+    <a class="article-view-link">
+      <span id="busuanzi_value_page_pv"></span>
+      Times
+    </a>
+  
+  
+
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C</a></li></ul>
+
     </footer>
   </div>
   
+    
     
 <nav id="article-nav">
   
@@ -161,9 +174,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 10px;">C</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -194,6 +221,11 @@
   </div>
 
   
+    <div id="toc-div" class="widget-wrap" style="visibility:hidden">
+  <h3 class="widget-title">Content</h3>
+  <div class="widget"></div>
+</div>
+  
 </aside>
         
       </div>
@@ -203,6 +235,13 @@
     <div id="footer-info" class="inner">
       
       &copy; 2023 Dangfer<br>
+      
+  
+  
+    View <span id="busuanzi_value_site_pv"></span> times,
+    <span id="busuanzi_value_site_uv"></span> visitors in total.<br>
+  
+
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -258,6 +297,16 @@
         serverURLs: 'https://7kboykqi.lc-cn-e1-shared.com'
     });
 </script>
+
+
+
+  
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+<script src="/js/toc.js"></script>
 
   </div>
 </body>

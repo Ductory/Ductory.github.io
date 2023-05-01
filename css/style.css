@@ -717,8 +717,17 @@ a.article-title:hover {
 .article-tag-list-link:before {
   content: "#";
 }
+.article-view-link {
+  float: right;
+}
+.article-view-link:before {
+  content: "\f06e";
+  font-family: FontAwesome;
+  padding-right: 8px;
+}
 .article-comment-link {
   float: right;
+  margin-left: 20px;
 }
 .article-comment-link:before {
   content: "\f075";
