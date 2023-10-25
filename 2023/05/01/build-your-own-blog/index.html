@@ -37,6 +37,8 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
+
+  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -97,63 +99,73 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>本文将简要介绍如何搭建个人博客。搭建博客方式数不胜数，读者亦可自行撷取一二更适合自己的。本文将使用一种主流搭站方式，将涉及以下：<code>Github</code>，<code>Hexo</code>，<code>Vercel</code>，以及可选的<code>LeanCloud</code>。</p>
-<h2 id="搭站"><a href="#搭站" class="headerlink" title="搭站"></a>搭站</h2><p>此步骤在网络上的资源相当多，有很多写得很好。为不造成无意义的重复，兹简要概括之。</p>
+<h2 id="搭站"><a class="markdownIt-Anchor" href="#搭站"></a> 搭站</h2>
+<p>此步骤在网络上的资源相当多，有很多写得很好。为不造成无意义的重复，兹简要概括之。</p>
 <ol>
-<li><p>若无Github账号，注册之</p>
+<li>
+<p>若无Github账号，注册之</p>
 </li>
-<li><p>Vercel新建一Project，选择Hexo模板，等待部署完毕</p>
+<li>
+<p>Vercel新建一Project，选择Hexo模板，等待部署完毕</p>
 </li>
-<li><p>本地安装Nodejs，然后安装hexo-cli</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>本地安装Nodejs，然后安装hexo-cli</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>至此，搭站完毕。</p>
-<h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><p>搭站完毕后默认有一<code>hello-world.md</code>，其中有对基本操作进行介绍。兹对其做进一步说明。</p>
+<h2 id="hexo命令"><a class="markdownIt-Anchor" href="#hexo命令"></a> Hexo命令</h2>
+<p>搭站完毕后默认有一<code>hello-world.md</code>，其中有对基本操作进行介绍。兹对其做进一步说明。</p>
 <p>Hexo原生支持使用<code>markdown</code>和<code>ejs</code>进行写作，其他格式可以安装对应插件进行扩展。</p>
 <p><strong>官方文档：</strong><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo Documentation</a></p>
 <p>当我们想要更新博客时，一般步骤为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post-name <span class="comment">#创建新文章</span></span><br><span class="line"><span class="comment">#使用md编辑器进行编辑</span></span><br><span class="line">$ hexo s <span class="comment">#本地测试(本地服务是动态渲染的, 无需先打包)</span></span><br><span class="line">$ hexo g <span class="comment">#打包</span></span><br><span class="line">$ hexo d <span class="comment">#部署</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new hello-world</span><br></pre></td></tr></table></figure>
-
+<h3 id="创建新文章"><a class="markdownIt-Anchor" href="#创建新文章"></a> 创建新文章</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new hello-world</span><br></pre></td></tr></table></figure>
 <p>以下是一些常用的，（<a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">原文</a>在此）：</p>
-<h4 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h4><p>不同布局的post会存放在不同的目录中。</p>
+<h4 id="layout"><a class="markdownIt-Anchor" href="#layout"></a> Layout</h4>
+<p>不同布局的post会存放在不同的目录中。</p>
 <table>
 <thead>
 <tr>
-<th align="left">Layout</th>
-<th align="left">Directory</th>
+<th style="text-align:left">Layout</th>
+<th style="text-align:left">Directory</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left"><code>post</code>(default)</td>
-<td align="left"><code>source/_posts</code></td>
+<tbody>
+<tr>
+<td style="text-align:left"><code>post</code>(default)</td>
+<td style="text-align:left"><code>source/_posts</code></td>
 </tr>
 <tr>
-<td align="left"><code>page</code></td>
-<td align="left"><code>source</code></td>
+<td style="text-align:left"><code>page</code></td>
+<td style="text-align:left"><code>source</code></td>
 </tr>
 <tr>
-<td align="left"><code>draft</code></td>
-<td align="left"><code>source/_drafts</code></td>
+<td style="text-align:left"><code>draft</code></td>
+<td style="text-align:left"><code>source/_drafts</code></td>
 </tr>
-</tbody></table>
-<h3 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
+</tbody>
+</table>
+<h3 id="启动本地服务"><a class="markdownIt-Anchor" href="#启动本地服务"></a> 启动本地服务</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>其中后者为等价简写。后同不述。</p>
 <p>访问<a target="_blank" rel="noopener" href="http://localhost:4000/">localhost</a>即可查看效果。</p>
-<h3 id="打包为静态页面"><a href="#打包为静态页面" class="headerlink" title="打包为静态页面"></a>打包为静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-
+<h3 id="打包为静态页面"><a class="markdownIt-Anchor" href="#打包为静态页面"></a> 打包为静态页面</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 <p>我们的博客部署在Github上，但其Github无法动态渲染，故我们需要先渲染完再上传。</p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
+<h3 id="部署"><a class="markdownIt-Anchor" href="#部署"></a> 部署</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 <p>此命令即将我们打包完的更新部署至仓库。需要注意部署后需等待一段时间才能看到更新。</p>
-<h2 id="Hexo主题"><a href="#Hexo主题" class="headerlink" title="Hexo主题"></a>Hexo主题</h2><p>Hexo有相当多的主题，网上也有很多相关教程。NexT和Butterfly两者可谓主流，资料相当多。为不重复，本文着重于Hexo的默认主题Landscape。此部分仅用于Landscape的美化，并会长期更新。</p>
+<h2 id="hexo主题"><a class="markdownIt-Anchor" href="#hexo主题"></a> Hexo主题</h2>
+<p>Hexo有相当多的主题，网上也有很多相关教程。NexT和Butterfly两者可谓主流，资料相当多。为不重复，本文着重于Hexo的默认主题Landscape。此部分仅用于Landscape的美化，并会长期更新。</p>
 <blockquote>
 <p>事实上，直接采用diff会更好，但是由于我没有做备份，故暂且采用此方式。</p>
 </blockquote>
-<h3 id="网站访问次数统计"><a href="#网站访问次数统计" class="headerlink" title="网站访问次数统计"></a>网站访问次数统计</h3><p>目前主流的方案是不蒜子，<a target="_blank" rel="noopener" href="http://ibruce.info/2015/04/04/busuanzi/">官方教程</a>在此。</p>
+<h3 id="网站访问次数统计"><a class="markdownIt-Anchor" href="#网站访问次数统计"></a> 网站访问次数统计</h3>
+<p>目前主流的方案是不蒜子，<a target="_blank" rel="noopener" href="http://ibruce.info/2015/04/04/busuanzi/">官方教程</a>在此。</p>
 <p>以下是Hexo的一种具体操作，但并非唯一。若需改动，建议阅读Theme Layout一节。</p>
 <p>注意，为了扩展性，我们使用了一种更加复杂的方式实现，后文将介绍一种最简的实现。</p>
 <p>此外，还需简单说明一下本文代码改动的一些记号约定。此约定可能会改动，如果有更好的方案被提出。</p>
@@ -165,37 +177,42 @@
 </ul>
 <p>步骤如下。这些都是对主题的修改，切勿修改成根目录下的文件：</p>
 <ol>
-<li><p>在<code>_config.yml</code>中添加不蒜子</p>
+<li>
+<p>在<code>_config.yml</code>中添加不蒜子</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># if you want to use busuanzi, set this value true</span></span><br><span class="line">  <span class="attr">site:</span> <span class="literal">true</span> <span class="comment"># the total number of visits to the site</span></span><br><span class="line">  <span class="attr">page:</span> <span class="literal">true</span> <span class="comment"># the number of visits to a single page</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在<code>layout/_partial/after_footer.ejs</code>中引入js（未若注明，后文皆默认在<code>layout/_partial</code>目录下操作）</p>
+<li>
+<p>在<code>layout/_partial/after_footer.ejs</code>中引入js（未若注明，后文皆默认在<code>layout/_partial</code>目录下操作）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@after_footer.ejs</span><br><span class="line">#append</span><br><span class="line">&lt;% if (theme.busuanzi.enable)&#123; %&gt;</span><br><span class="line">  &lt;%- js(&#123;src: &#x27;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#x27;, async: true&#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在<code>layout/_partial/</code>目录下添加<code>busuanzi.ejs</code></p>
+<li>
+<p>在<code>layout/_partial/</code>目录下添加<code>busuanzi.ejs</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.busuanzi.enable)&#123; %&gt;</span><br><span class="line">  &lt;% if (type == 0 &amp;&amp; theme.busuanzi.page)&#123; %&gt;</span><br><span class="line">    &lt;a class=&quot;article-view-link&quot;&gt;</span><br><span class="line">      &lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;</span><br><span class="line">      &lt;%= __(&#x27;times&#x27;) %&gt;</span><br><span class="line">    &lt;/a&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line">  &lt;% if (type == 2 &amp;&amp; theme.busuanzi.site)&#123; %&gt;</span><br><span class="line">    View &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; times,</span><br><span class="line">    &lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt; visitors in total.&lt;br&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-
 <p>此代码写得不好，其中type的取值为：0-文章页面，1-主页面，2-footer。由于主页面无法显示每篇文章的访问次数，而此ejs又会在<code>article.ejs</code>中调用，故而type为1时不应使用不蒜子。</p>
 </li>
-<li><p>修改<code>languages/</code>目录下的yml，新增<code>times</code>一项</p>
+<li>
+<p>修改<code>languages/</code>目录下的yml，新增<code>times</code>一项</p>
 </li>
-<li><p>修改<code>footer.ejs</code>和<code>article.ejs</code></p>
+<li>
+<p>修改<code>footer.ejs</code>和<code>article.ejs</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@footer.ejs</span><br><span class="line">#before:&lt;%= __(&#x27;powered_by&#x27;) %&gt; ...</span><br><span class="line">+ &lt;%- partial(&#x27;busuanzi&#x27;, &#123;type: 2&#125;) %&gt;</span><br><span class="line"></span><br><span class="line">@article.ejs</span><br><span class="line">#before:&lt;%- partial(&#x27;post/tag&#x27;) %&gt;</span><br><span class="line">+ &lt;%- partial(&#x27;busuanzi&#x27;, &#123;type: index&#125;) %&gt;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>修改<code>/source/css/_partial/article.styl</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@/source/css/_partial/article.styl</span><br><span class="line">#append</span><br><span class="line">.article-view-link</span><br><span class="line">  cursor: default</span><br><span class="line">  float: right</span><br><span class="line">  &amp;:before</span><br><span class="line">    content: &quot;\f06e&quot;</span><br><span class="line">    font-family: font-icon</span><br><span class="line">    padding-right: 8px</span><br><span class="line">#in:.article-comment-link</span><br><span class="line">#&amp; before:&amp;:before</span><br><span class="line">+ margin-left: 20px</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>修改<code>/source/css/_partial/article.styl</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@/source/css/_partial/article.styl</span><br><span class="line">#append</span><br><span class="line">.article-view-link</span><br><span class="line">  cursor: default</span><br><span class="line">  float: right</span><br><span class="line">  &amp;:before</span><br><span class="line">    content: &quot;\f06e&quot;</span><br><span class="line">    font-family: font-icon</span><br><span class="line">    padding-right: 8px</span><br><span class="line">#in:.article-comment-link</span><br><span class="line">#&amp; before:&amp;:before</span><br><span class="line">+ margin-left: 20px</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>以下是极简的版本，注意，这将会增加耦合性：</p>
    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@after-footer.ejs</span><br><span class="line">#append</span><br><span class="line">&lt;%- js(&#123;src: &#x27;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#x27;, async: true&#125;) %&gt;</span><br><span class="line"></span><br><span class="line">@footer.ejs</span><br><span class="line">#before:&lt;%= __(&#x27;powered_by&#x27;) %&gt; ...</span><br><span class="line">+ View &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; times,</span><br><span class="line">+ &lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt; visitors in total.&lt;br&gt;</span><br><span class="line"></span><br><span class="line">@article.ejs</span><br><span class="line">#after:&lt;%- partial(&#x27;post/tag&#x27;) %&gt;</span><br><span class="line">+ View &lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt; times.</span><br></pre></td></tr></table></figure>
-
-<h3 id="为文章添加目录"><a href="#为文章添加目录" class="headerlink" title="为文章添加目录"></a>为文章添加目录</h3><p>Landscape并没有使用Hexo提供的<code>toc</code>功能，因此尽管很多主题都有sidebar显示目录的功能，但Landscape需要自行实现。</p>
+<h3 id="为文章添加目录"><a class="markdownIt-Anchor" href="#为文章添加目录"></a> 为文章添加目录</h3>
+<p>Landscape并没有使用Hexo提供的<code>toc</code>功能，因此尽管很多主题都有sidebar显示目录的功能，但Landscape需要自行实现。</p>
 <p>此实现可能略有瑕疵。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">@/_config.yml</span><br><span class="line">#in:widget</span><br><span class="line">#&amp; append</span><br><span class="line">- toc</span><br><span class="line"></span><br><span class="line">@layout/_widget/toc.ejs</span><br><span class="line">#new</span><br><span class="line">&lt;div id=&quot;toc-div&quot; class=&quot;widget-wrap&quot; style=&quot;visibility:hidden&quot;&gt;</span><br><span class="line">  &lt;h3 class=&quot;widget-title&quot;&gt;&lt;%= __(&#x27;toc&#x27;) %&gt;&lt;/h3&gt;</span><br><span class="line">  &lt;div class=&quot;widget&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">@article.ejs</span><br><span class="line">#before:&lt;%- partial(&#x27;post/nav&#x27;) %&gt;</span><br><span class="line">+ &lt;% if (post.toc)&#123; %&gt;</span><br><span class="line">+   &lt;%- partial(&#x27;post/toc&#x27;) %&gt;</span><br><span class="line">+ &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">@_post/toc.ejs</span><br><span class="line">#new</span><br><span class="line">&lt;div id=&quot;toc&quot; style=&quot;visibility:hidden&quot;&gt;</span><br><span class="line">  &lt;%- toc(post.content, &#123;list_number: false&#125;) %&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">@/source/js/toc.js</span><br><span class="line">#new</span><br><span class="line">(function()&#123;</span><br><span class="line">  if($(&quot;#toc&quot;).length)&#123;</span><br><span class="line">    $(&quot;#toc-div .widget&quot;).html($(&quot;#toc&quot;));</span><br><span class="line">    $(&quot;#toc-div&quot;).css(&#123;&quot;visibility&quot;: &quot;visible&quot;&#125;);</span><br><span class="line">    $(&quot;#toc&quot;).css(&#123;&quot;visibility&quot;: &quot;visible&quot;&#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  var position = $(&#x27;#toc-div&#x27;).position().top;</span><br><span class="line">  $(window).scroll(function()&#123;</span><br><span class="line">    $(&quot;#toc-div&quot;).css(&#123;</span><br><span class="line">      &quot;position&quot;:&quot;relative&quot;,</span><br><span class="line">      &quot;top&quot;:($(&quot;body,html&quot;).scrollTop() - position &gt; 0) ? $(&quot;body,html&quot;).scrollTop() - position : 0</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ductory.github.io/2023/05/01/build-your-own-blog/" data-id="clh531f6o0000cgf55smx9u5g" data-title="浅谈个人博客搭建" class="article-share-link">Share</a>
+      <a data-url="https://ductory.github.io/2023/05/01/build-your-own-blog/" data-id="clo5r4yax0000jcf5a345c1m7" data-title="浅谈个人博客搭建" class="article-share-link">Share</a>
       
       
         <a href="/2023/05/01/build-your-own-blog/#comments" class="article-comment-link">
@@ -220,17 +237,17 @@
   
     
       <div id="toc" style="visibility:hidden">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E7%AB%99"><span class="toc-text">搭站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E5%91%BD%E4%BB%A4"><span class="toc-text">Hexo命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-text">创建新文章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Layout"><span class="toc-text">Layout</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1"><span class="toc-text">启动本地服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E4%B8%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2"><span class="toc-text">打包为静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text">部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo%E4%B8%BB%E9%A2%98"><span class="toc-text">Hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">网站访问次数统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95"><span class="toc-text">为文章添加目录</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E7%AB%99"><span class="toc-text"> 搭站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="toc-text"> Hexo命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-text"> 创建新文章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text"> 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#layout"><span class="toc-text"> Layout</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1"><span class="toc-text"> 启动本地服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E4%B8%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2"><span class="toc-text"> 打包为静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text"> 部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E4%B8%BB%E9%A2%98"><span class="toc-text"> Hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text"> 网站访问次数统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95"><span class="toc-text"> 为文章添加目录</span></a></li></ol></li></ol>
 </div>
     
     
 <nav id="article-nav">
   
-    <a href="/2023/07/25/%E8%B0%88%E7%BE%8E/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/10/25/%E6%B5%85%E8%B0%88%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AE%97%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          谈美
+          浅谈一些有趣的图像处理算法
         
       </div>
     </a>
@@ -262,7 +279,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
     </div>
   </div>
 
@@ -272,7 +289,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/%E6%96%87%E5%AD%A6/" style="font-size: 10px;">文学</a>
+      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
     </div>
   </div>
 
@@ -281,7 +298,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
     </div>
   </div>
 
@@ -294,7 +311,7 @@
       <ul>
         
           <li>
-            <a href="/2023/07/25/%E8%B0%88%E7%BE%8E/">谈美</a>
+            <a href="/2023/10/25/%E6%B5%85%E8%B0%88%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AE%97%E6%B3%95/">浅谈一些有趣的图像处理算法</a>
           </li>
         
           <li>
@@ -327,7 +344,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 Dangfer<br>
+      &copy; 2023 Dangfer | Licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-sa/4.0/">BY-SA 4.0</a><br>
       
   
   

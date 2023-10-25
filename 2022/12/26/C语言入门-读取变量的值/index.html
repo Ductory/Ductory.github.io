@@ -37,6 +37,8 @@
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
   
+
+  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
@@ -96,17 +98,15 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p><strong>题目：</strong>已知<code>main</code>函数中有一个变量<code>i</code>，我们想要读取它的值并输出。</p>
+        <p>**题目：**已知<code>main</code>函数中有一个变量<code>i</code>，我们想要读取它的值并输出。</p>
 <p>不得不说，这是一道相当难的题目，可能会难倒一大片刚学C语言的新手。但是不要怕，这道题目其实没有我们想象中的那么难。就算我们现在什么也不知道，我们也可以先写出一个模板：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">12345</span>;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>很多同学到这一步可能就想到了：哎，输出可以用<code>printf</code>函数。那么我们就可以写出<code>printf(&quot;%d\n&quot;, /*?*/);</code>。到这一步可能就有很多同学放弃了。这里注释的地方应该怎么写呢？</p>
 <p>这个地方确实有点难想，但是可能有些聪明的小伙伴可能就想到了，我们可以在这里放一个值，这样<code>printf</code>函数就可以把这个值输出了。</p>
 <p>那么我们怎么让这个值等于<code>i</code>呢？</p>
 <p>这时候我们就很自然地想到了，函数的返回值就是一个值。那么问题就很自然地转化成了我们要编写一个函数，让它的返回值等于<code>i</code>。</p>
 <p>可以看到变量<code>i</code>是<code>int</code>类型的，那么我们就可以定义一个返回值为<code>int</code>类型的函数：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>那么问题就很自然地转化成了找到一个a和b使得a+b的值等于<code>i</code>。</p>
 <p>很多同学到这一步就卡住了。我们怎么才能找到这样的a和b呢？</p>
 <p>这个问题确实有点复杂，那么我们简化一下问题，让它只用考虑一个参数。</p>
@@ -115,7 +115,6 @@
 <p>到这一步很多同学可能就放弃了。虽然我们简化了这个问题，但是寻找这个a还是非常困难。</p>
 <p>但是不要怕。我们在数学中学过，一个数加上0，结果和这个数相等。很多同学可能就豁然开朗了。这个a为0行不行呢？我们试试看：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">12345</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ((<span class="type">int</span>(<span class="type">int</span>))add)(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>我们一看打印结果，这就很神奇了，果然是12345，正好等于<code>i</code>。</p>
 <p>所以说，编程和数学密不可分。这么难的一道编程题目，我们只要稍加转换，再利用我们熟知的数学定理，就可以很轻松地得出答案。</p>
 <p>那么为什么会恰好等于<code>i</code>呢，就留作课后习题吧！</p>
@@ -123,7 +122,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ductory.github.io/2022/12/26/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8-%E8%AF%BB%E5%8F%96%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/" data-id="clh252zl300009gf53keab5q0" data-title="C语言入门 读取变量的值" class="article-share-link">Share</a>
+      <a data-url="https://ductory.github.io/2022/12/26/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8-%E8%AF%BB%E5%8F%96%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/" data-id="clo5r4yb30003jcf5adog85lm" data-title="C语言入门 读取变量的值" class="article-share-link">Share</a>
       
       
         <a href="/2022/12/26/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8-%E8%AF%BB%E5%8F%96%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/#comments" class="article-comment-link">
@@ -186,7 +185,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E5%AD%A6/" rel="tag">文学</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
     </div>
   </div>
 
@@ -196,7 +195,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 10px;">C</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/%E6%96%87%E5%AD%A6/" style="font-size: 10px;">文学</a>
+      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
     </div>
   </div>
 
@@ -205,7 +204,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li></ul>
     </div>
   </div>
 
@@ -218,7 +217,7 @@
       <ul>
         
           <li>
-            <a href="/2023/07/25/%E8%B0%88%E7%BE%8E/">谈美</a>
+            <a href="/2023/10/25/%E6%B5%85%E8%B0%88%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AE%97%E6%B3%95/">浅谈一些有趣的图像处理算法</a>
           </li>
         
           <li>
@@ -251,7 +250,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 Dangfer<br>
+      &copy; 2023 Dangfer | Licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-sa/4.0/">BY-SA 4.0</a><br>
       
   
   

@@ -718,6 +718,7 @@ a.article-title:hover {
   content: "#";
 }
 .article-view-link {
+  cursor: default;
   float: right;
 }
 .article-view-link:before {
