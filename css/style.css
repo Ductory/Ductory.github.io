@@ -340,6 +340,10 @@ body {
 }
 #header-inner {
   position: relative;
+  overflow: hidden;
+}
+#header-inner.search {
+  overflow: visible;
 }
 #banner {
   position: absolute;
@@ -503,6 +507,7 @@ body {
 }
 #site-search-result {
   position: absolute;
+  overflow: hidden;
   top: 50px;
   right: 0;
   width: 100%;
@@ -515,10 +520,12 @@ body {
 }
 #site-search-result.on {
   opacity: 1;
+  right: 0;
 }
 @media screen and (max-width: 479px) {
   #site-search-result {
     width: 100%;
+    right: -100%;
   }
 }
 .search-result-list {

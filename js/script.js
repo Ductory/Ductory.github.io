@@ -3,6 +3,7 @@
   var $searchWrap = $('#search-form-wrap'),
     isSearchAnim = false,
     searchAnimDuration = 200;
+  const $headerInner = $('#header-inner');
   const $searchResult = $('#site-search-result');
 
   var startSearchAnim = function(){
@@ -20,6 +21,7 @@
     if (isSearchAnim) return;
 
     startSearchAnim();
+    $headerInner.addClass('search');
     $searchWrap.addClass('on');
     $searchResult.addClass('on');
     stopSearchAnim(function(){
@@ -29,6 +31,7 @@
 
   $('.search-form-input').on('blur', function(){
     startSearchAnim();
+    $headerInner.removeClass('search');
     $searchWrap.removeClass('on');
     $searchResult.removeClass('on');
     stopSearchAnim();
