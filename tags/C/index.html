@@ -62,8 +62,14 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ductory.github.io"></form>
+        <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ductory.github.io"></form> -->
+        <div class="search-form">
+          <input type="text" id="site-search-input" class="search-form-input" placeholder="">
+          <!-- <button type="submit" class="search-form-submit">'&#xF002;'</button> -->
+          <!-- <input type="hidden" name="sitesearch" value="${config.url}"> -->
+        </div>
       </div>
+        <div id="site-search-result"></div>
     </div>
   </div>
 </header>
@@ -87,6 +93,9 @@
     <header class="archive-article-header">
       <a href="/2023/11/19/%E8%AE%A9tcc%E7%94%A8%E4%B8%8ASEH/" class="archive-article-date">
   <time class="dt-published" datetime="2023-11-19T06:17:23.000Z" itemprop="datePublished">Nov 19</time>
+  <time class="dt-updated" datetime="2024-04-30T16:02:11.653Z" itemprop="dateUpdated">
+     (UPDATED May 1)
+  </time>
 </a>
       
   
@@ -106,6 +115,9 @@
     <header class="archive-article-header">
       <a href="/2023/10/25/%E6%B5%85%E8%B0%88%E4%B8%80%E4%BA%9B%E6%9C%89%E8%B6%A3%E7%9A%84%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AE%97%E6%B3%95/" class="archive-article-date">
   <time class="dt-published" datetime="2023-10-25T02:44:44.000Z" itemprop="datePublished">Oct 25</time>
+  <time class="dt-updated" datetime="2024-06-06T09:16:33.019Z" itemprop="dateUpdated">
+     (UPDATED Jun 6)
+  </time>
 </a>
       
   
@@ -135,6 +147,9 @@
     <header class="archive-article-header">
       <a href="/2022/12/26/C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8-%E8%AF%BB%E5%8F%96%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/" class="archive-article-date">
   <time class="dt-published" datetime="2022-12-26T14:38:23.000Z" itemprop="datePublished">Dec 26</time>
+  <time class="dt-updated" datetime="2023-05-01T07:29:39.637Z" itemprop="dateUpdated">
+     (UPDATED May 1)
+  </time>
 </a>
       
   
@@ -305,6 +320,20 @@
 
 
 <script src="/js/toc.js"></script>
+
+
+
+  
+<script src="/js/search.js"></script>
+
+  <script type="text/javascript">      
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    searchFunc(path, 'site-search-input', 'site-search-result');
+  </script>
 
   </div>
 </body>

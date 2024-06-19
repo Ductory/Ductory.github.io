@@ -62,8 +62,14 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ductory.github.io"></form>
+        <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ductory.github.io"></form> -->
+        <div class="search-form">
+          <input type="text" id="site-search-input" class="search-form-input" placeholder="">
+          <!-- <button type="submit" class="search-form-submit">'&#xF002;'</button> -->
+          <!-- <input type="hidden" name="sitesearch" value="${config.url}"> -->
+        </div>
       </div>
+        <div id="site-search-result"></div>
     </div>
   </div>
 </header>
@@ -87,6 +93,9 @@
     <header class="archive-article-header">
       <a href="/2024/05/10/%E5%85%8D%E8%B4%B9%E7%9A%84%E9%BB%84%E6%B2%B9%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/" class="archive-article-date">
   <time class="dt-published" datetime="2024-05-10T08:34:40.000Z" itemprop="datePublished">May 10</time>
+  <time class="dt-updated" datetime="2024-06-19T03:09:45.777Z" itemprop="dateUpdated">
+     (UPDATED Jun 19)
+  </time>
 </a>
       
   
@@ -257,6 +266,20 @@
 
 
 <script src="/js/toc.js"></script>
+
+
+
+  
+<script src="/js/search.js"></script>
+
+  <script type="text/javascript">      
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    searchFunc(path, 'site-search-input', 'site-search-result');
+  </script>
 
   </div>
 </body>
