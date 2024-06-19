@@ -106,7 +106,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>本文将简要介绍如何搭建个人博客。搭建博客方式数不胜数，读者亦可自行撷取一二更适合自己的。本文将使用一种主流搭站方式，将涉及以下：<code>Github</code>，<code>Hexo</code>，<code>Vercel</code>，以及可选的<code>LeanCloud</code>。</p>
-<h2 id="搭站"><a class="markdownIt-Anchor" href="#搭站"></a> 搭站</h2>
+<h2 id="搭站">搭站</h2>
 <p>此步骤在网络上的资源相当多，有很多写得很好。为不造成无意义的重复，兹简要概括之。</p>
 <ol>
 <li>
@@ -121,18 +121,18 @@
 </li>
 </ol>
 <p>至此，搭站完毕。</p>
-<h2 id="hexo命令"><a class="markdownIt-Anchor" href="#hexo命令"></a> Hexo命令</h2>
+<h2 id="hexo命令">Hexo命令</h2>
 <p>搭站完毕后默认有一<code>hello-world.md</code>，其中有对基本操作进行介绍。兹对其做进一步说明。</p>
 <p>Hexo原生支持使用<code>markdown</code>和<code>ejs</code>进行写作，其他格式可以安装对应插件进行扩展。</p>
 <p><strong>官方文档：</strong><a target="_blank" rel="noopener" href="https://hexo.io/docs/">Hexo Documentation</a></p>
 <p>当我们想要更新博客时，一般步骤为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post-name <span class="comment">#创建新文章</span></span><br><span class="line"><span class="comment">#使用md编辑器进行编辑</span></span><br><span class="line">$ hexo s <span class="comment">#本地测试(本地服务是动态渲染的, 无需先打包)</span></span><br><span class="line">$ hexo g <span class="comment">#打包</span></span><br><span class="line">$ hexo d <span class="comment">#部署</span></span><br></pre></td></tr></table></figure>
-<h3 id="创建新文章"><a class="markdownIt-Anchor" href="#创建新文章"></a> 创建新文章</h3>
+<h3 id="创建新文章">创建新文章</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h4>
+<h4 id="例子">例子</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new hello-world</span><br></pre></td></tr></table></figure>
 <p>以下是一些常用的，（<a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">原文</a>在此）：</p>
-<h4 id="layout"><a class="markdownIt-Anchor" href="#layout"></a> Layout</h4>
+<h4 id="layout">Layout</h4>
 <p>不同布局的post会存放在不同的目录中。</p>
 <table>
 <thead>
@@ -156,22 +156,22 @@
 </tr>
 </tbody>
 </table>
-<h3 id="启动本地服务"><a class="markdownIt-Anchor" href="#启动本地服务"></a> 启动本地服务</h3>
+<h3 id="启动本地服务">启动本地服务</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>其中后者为等价简写。后同不述。</p>
 <p>访问<a target="_blank" rel="noopener" href="http://localhost:4000/">localhost</a>即可查看效果。</p>
-<h3 id="打包为静态页面"><a class="markdownIt-Anchor" href="#打包为静态页面"></a> 打包为静态页面</h3>
+<h3 id="打包为静态页面">打包为静态页面</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 <p>我们的博客部署在Github上，但其Github无法动态渲染，故我们需要先渲染完再上传。</p>
-<h3 id="部署"><a class="markdownIt-Anchor" href="#部署"></a> 部署</h3>
+<h3 id="部署">部署</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 <p>此命令即将我们打包完的更新部署至仓库。需要注意部署后需等待一段时间才能看到更新。</p>
-<h2 id="hexo主题"><a class="markdownIt-Anchor" href="#hexo主题"></a> Hexo主题</h2>
+<h2 id="hexo主题">Hexo主题</h2>
 <p>Hexo有相当多的主题，网上也有很多相关教程。NexT和Butterfly两者可谓主流，资料相当多。为不重复，本文着重于Hexo的默认主题Landscape。此部分仅用于Landscape的美化，并会长期更新。</p>
 <blockquote>
 <p>事实上，直接采用diff会更好，但是由于我没有做备份，故暂且采用此方式。</p>
 </blockquote>
-<h3 id="网站访问次数统计"><a class="markdownIt-Anchor" href="#网站访问次数统计"></a> 网站访问次数统计</h3>
+<h3 id="网站访问次数统计">网站访问次数统计</h3>
 <p>目前主流的方案是不蒜子，<a target="_blank" rel="noopener" href="http://ibruce.info/2015/04/04/busuanzi/">官方教程</a>在此。</p>
 <p>以下是Hexo的一种具体操作，但并非唯一。若需改动，建议阅读Theme Layout一节。</p>
 <p>注意，为了扩展性，我们使用了一种更加复杂的方式实现，后文将介绍一种最简的实现。</p>
@@ -211,7 +211,7 @@
 </ol>
 <p>以下是极简的版本，注意，这将会增加耦合性：</p>
    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@after-footer.ejs</span><br><span class="line">#append</span><br><span class="line">&lt;%- js(&#123;src: &#x27;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#x27;, async: true&#125;) %&gt;</span><br><span class="line"></span><br><span class="line">@footer.ejs</span><br><span class="line">#before:&lt;%= __(&#x27;powered_by&#x27;) %&gt; ...</span><br><span class="line">+ View &lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt; times,</span><br><span class="line">+ &lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt; visitors in total.&lt;br&gt;</span><br><span class="line"></span><br><span class="line">@article.ejs</span><br><span class="line">#after:&lt;%- partial(&#x27;post/tag&#x27;) %&gt;</span><br><span class="line">+ View &lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt; times.</span><br></pre></td></tr></table></figure>
-<h3 id="为文章添加目录"><a class="markdownIt-Anchor" href="#为文章添加目录"></a> 为文章添加目录</h3>
+<h3 id="为文章添加目录">为文章添加目录</h3>
 <p>Landscape并没有使用Hexo提供的<code>toc</code>功能，因此尽管很多主题都有sidebar显示目录的功能，但Landscape需要自行实现。</p>
 <p>此实现可能略有瑕疵。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">@/_config.yml</span><br><span class="line">#in:widget</span><br><span class="line">#&amp; append</span><br><span class="line">- toc</span><br><span class="line"></span><br><span class="line">@layout/_widget/toc.ejs</span><br><span class="line">#new</span><br><span class="line">&lt;div id=&quot;toc-div&quot; class=&quot;widget-wrap&quot; style=&quot;visibility:hidden&quot;&gt;</span><br><span class="line">  &lt;h3 class=&quot;widget-title&quot;&gt;&lt;%= __(&#x27;toc&#x27;) %&gt;&lt;/h3&gt;</span><br><span class="line">  &lt;div class=&quot;widget&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">@article.ejs</span><br><span class="line">#before:&lt;%- partial(&#x27;post/nav&#x27;) %&gt;</span><br><span class="line">+ &lt;% if (post.toc)&#123; %&gt;</span><br><span class="line">+   &lt;%- partial(&#x27;post/toc&#x27;) %&gt;</span><br><span class="line">+ &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">@_post/toc.ejs</span><br><span class="line">#new</span><br><span class="line">&lt;div id=&quot;toc&quot; style=&quot;visibility:hidden&quot;&gt;</span><br><span class="line">  &lt;%- toc(post.content, &#123;list_number: false&#125;) %&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">@/source/js/toc.js</span><br><span class="line">#new</span><br><span class="line">(function()&#123;</span><br><span class="line">  if($(&quot;#toc&quot;).length)&#123;</span><br><span class="line">    $(&quot;#toc-div .widget&quot;).html($(&quot;#toc&quot;));</span><br><span class="line">    $(&quot;#toc-div&quot;).css(&#123;&quot;visibility&quot;: &quot;visible&quot;&#125;);</span><br><span class="line">    $(&quot;#toc&quot;).css(&#123;&quot;visibility&quot;: &quot;visible&quot;&#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  var position = $(&#x27;#toc-div&#x27;).position().top;</span><br><span class="line">  $(window).scroll(function()&#123;</span><br><span class="line">    $(&quot;#toc-div&quot;).css(&#123;</span><br><span class="line">      &quot;position&quot;:&quot;relative&quot;,</span><br><span class="line">      &quot;top&quot;:($(&quot;body,html&quot;).scrollTop() - position &gt; 0) ? $(&quot;body,html&quot;).scrollTop() - position : 0</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
@@ -219,7 +219,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ductory.github.io/2023/05/01/build-your-own-blog/" data-id="cluepxmxj0006q8f56utpdxtt" data-title="浅谈个人博客搭建" class="article-share-link">Share</a>
+      <a data-url="https://ductory.github.io/2023/05/01/build-your-own-blog/" data-id="clxlbrr8c0001j0f52b4fgsw2" data-title="浅谈个人博客搭建" class="article-share-link">Share</a>
       
       
         <a href="/2023/05/01/build-your-own-blog/#comments" class="article-comment-link">
@@ -244,7 +244,7 @@
   
     
       <div id="toc" style="visibility:hidden">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E7%AB%99"><span class="toc-text"> 搭站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="toc-text"> Hexo命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-text"> 创建新文章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text"> 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#layout"><span class="toc-text"> Layout</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1"><span class="toc-text"> 启动本地服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E4%B8%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2"><span class="toc-text"> 打包为静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text"> 部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E4%B8%BB%E9%A2%98"><span class="toc-text"> Hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text"> 网站访问次数统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95"><span class="toc-text"> 为文章添加目录</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E7%AB%99"><span class="toc-text">搭站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E5%91%BD%E4%BB%A4"><span class="toc-text">Hexo命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-text">创建新文章</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#layout"><span class="toc-text">Layout</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1"><span class="toc-text">启动本地服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E4%B8%BA%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2"><span class="toc-text">打包为静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2"><span class="toc-text">部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo%E4%B8%BB%E9%A2%98"><span class="toc-text">Hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%AC%A1%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">网站访问次数统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95"><span class="toc-text">为文章添加目录</span></a></li></ol></li></ol>
 </div>
     
     

@@ -340,7 +340,6 @@ body {
 }
 #header-inner {
   position: relative;
-  overflow: hidden;
 }
 #banner {
   position: absolute;
@@ -501,6 +500,50 @@ body {
 .search-form-submit:hover,
 .search-form-submit:focus {
   color: #777;
+}
+#site-search-result {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  background: none;
+}
+#site-search-result.on {
+  opacity: 1;
+}
+@media screen and (max-width: 479px) {
+  #site-search-result {
+    width: 100%;
+  }
+}
+.search-result-list {
+  background: #fff;
+  padding: 5px 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.search-result {
+  border: none;
+  background: none;
+  width: 100%;
+  outline: none;
+  font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.search-result-title {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #555;
+}
+.search-keyword {
+  font-weight: bold;
+  color: #f00;
 }
 .article {
   margin: 50px 0;
