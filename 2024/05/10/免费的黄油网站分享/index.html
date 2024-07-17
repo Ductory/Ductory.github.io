@@ -14,7 +14,7 @@
 <meta property="og:description" content="分享一些我逆向得到的网址，并展示应当如何对卡密类APP进行逆向。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-05-10T08:34:40.000Z">
-<meta property="article:modified_time" content="2024-06-26T11:49:10.406Z">
+<meta property="article:modified_time" content="2024-07-17T11:56:13.913Z">
 <meta property="article:author" content="Dangfer">
 <meta property="article:tag" content="reverse">
 <meta property="article:tag" content="资源分享">
@@ -82,8 +82,8 @@
   <div class="article-meta">
     <a href="/2024/05/10/%E5%85%8D%E8%B4%B9%E7%9A%84%E9%BB%84%E6%B2%B9%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/" class="article-date">
   <time class="dt-published" datetime="2024-05-10T08:34:40.000Z" itemprop="datePublished">2024-05-10</time>
-  <time class="dt-updated" datetime="2024-06-26T11:49:10.406Z" itemprop="dateUpdated">
-     (UPDATED 2024-06-26)
+  <time class="dt-updated" datetime="2024-07-17T11:56:13.913Z" itemprop="dateUpdated">
+     (UPDATED 2024-07-17)
   </time>
 </a>
     
@@ -178,6 +178,10 @@
 <p>发布页：<a target="_blank" rel="noopener" href="https://xhwe.cc/index.php/3.html">永久地址【收藏起来】 - 软件库 (xhwe.cc)</a></p>
 <p>虽然有个typecho站，但是并不能直接查看文章。</p>
 <p>APP会有一个FirstActivity，需要手动跳过或者等5秒，如果要用APP自己逆向改一下就行了。</p>
+<h2 id="黄油仓库"><a class="markdownIt-Anchor" href="#黄油仓库"></a> 黄油仓库</h2>
+<p>😓<span style='color:red'><strong>需要积分</strong></span></p>
+<p>网址：<a target="_blank" rel="noopener" href="https://hyck.cc/">黄油仓库 - 您的绅士游戏资源宝库！ (hyck.cc)</a> (感谢评论区<strong>海贼王路飞</strong>提供的网址)</p>
+<p>未测试。</p>
 <h2 id="其他网站"><a class="markdownIt-Anchor" href="#其他网站"></a> 其他网站</h2>
 <h3 id="steamunlocked"><a class="markdownIt-Anchor" href="#steamunlocked"></a> STEAMUNLOCKED</h3>
 <p>网址：<a target="_blank" rel="noopener" href="https://steamunlocked.net/">STEAMUNLOCKED » Free Steam Games Pre-installed for PC</a></p>
@@ -185,6 +189,10 @@
 <h3 id="樱花acg资源网"><a class="markdownIt-Anchor" href="#樱花acg资源网"></a> 樱花ACG资源网</h3>
 <p>网址：<a target="_blank" rel="noopener" href="https://acgyh.com/">樱花acg资源网 - ACG论坛 (acgyh.com)</a></p>
 <p>我在找资源的时候发现的。</p>
+<h3 id="哔咔-禁漫之类"><a class="markdownIt-Anchor" href="#哔咔-禁漫之类"></a> 哔咔、禁漫之类</h3>
+<p>其实直接上Google搜就行了。</p>
+<p>哔咔：<a target="_blank" rel="noopener" href="http://picacgp.com/">哔咔漫画 (picacgp.com)</a> APK可见评论区<strong>鸢一折纸</strong>提供的网址。</p>
+<p>禁漫：<a target="_blank" rel="noopener" href="https://jmcomicltd.xyz/">禁漫发布页</a></p>
 <h1 id="逆向"><a class="markdownIt-Anchor" href="#逆向"></a> 逆向</h1>
 <p>首先简要说明这类APP的逻辑。</p>
 <p>从用户角度来说，打开APP时，先跳出卡密界面。用户输入卡密后，提供卡密服务的服务器进行校验，成功后再进入正常的界面。</p>
@@ -276,7 +284,7 @@
   
     
       <div id="toc" style="visibility:hidden">
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-text"> 声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB"><span class="toc-text"> 网站分享</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cmdwacg%E5%98%A4%E5%98%A4%E6%80%AA"><span class="toc-text"> CMDW（ACG嘤嘤怪）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%98%E5%85%B9tuozi"><span class="toc-text"> 托兹（Tuozi）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E8%A7%A3%E5%AF%86"><span class="toc-text"> 在线解密</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%90%8C%E6%AC%A1%E5%85%83"><span class="toc-text"> 萌次元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%90%8C%E5%B9%BB%E4%B9%8B%E4%B9%A1"><span class="toc-text"> 萌幻之乡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%81%E7%8E%8B%E8%B5%84%E6%BA%90%E9%83%A8%E8%90%BD"><span class="toc-text"> 老王资源部落</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E8%99%8E%E8%BD%AF%E4%BB%B6%E5%BA%93"><span class="toc-text"> 小虎软件库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99"><span class="toc-text"> 其他网站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#steamunlocked"><span class="toc-text"> STEAMUNLOCKED</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%B1%E8%8A%B1acg%E8%B5%84%E6%BA%90%E7%BD%91"><span class="toc-text"> 樱花ACG资源网</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%86%E5%90%91"><span class="toc-text"> 逆向</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%93%E5%8C%85"><span class="toc-text"> 抓包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8Dapplication%E7%B1%BB"><span class="toc-text"> 恢复Application类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%B3%A8%E5%85%A5%E7%9A%84application%E7%B1%BB"><span class="toc-text"> 删除注入的Application类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86-2"><span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-text"> 处理方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8Dapplication%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-text"> 恢复Application类的继承关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86-3"><span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95-2"><span class="toc-text"> 处理方法</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E8%A6%81%E8%AF%95%E6%89%8B"><span class="toc-text"> 如果你要试手</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-text"> 声明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB"><span class="toc-text"> 网站分享</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cmdwacg%E5%98%A4%E5%98%A4%E6%80%AA"><span class="toc-text"> CMDW（ACG嘤嘤怪）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%98%E5%85%B9tuozi"><span class="toc-text"> 托兹（Tuozi）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E8%A7%A3%E5%AF%86"><span class="toc-text"> 在线解密</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%90%8C%E6%AC%A1%E5%85%83"><span class="toc-text"> 萌次元</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%90%8C%E5%B9%BB%E4%B9%8B%E4%B9%A1"><span class="toc-text"> 萌幻之乡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%81%E7%8E%8B%E8%B5%84%E6%BA%90%E9%83%A8%E8%90%BD"><span class="toc-text"> 老王资源部落</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E8%99%8E%E8%BD%AF%E4%BB%B6%E5%BA%93"><span class="toc-text"> 小虎软件库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%84%E6%B2%B9%E4%BB%93%E5%BA%93"><span class="toc-text"> 黄油仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%BD%91%E7%AB%99"><span class="toc-text"> 其他网站</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#steamunlocked"><span class="toc-text"> STEAMUNLOCKED</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%B1%E8%8A%B1acg%E8%B5%84%E6%BA%90%E7%BD%91"><span class="toc-text"> 樱花ACG资源网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%94%E5%92%94-%E7%A6%81%E6%BC%AB%E4%B9%8B%E7%B1%BB"><span class="toc-text"> 哔咔、禁漫之类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%86%E5%90%91"><span class="toc-text"> 逆向</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%93%E5%8C%85"><span class="toc-text"> 抓包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8Dapplication%E7%B1%BB"><span class="toc-text"> 恢复Application类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%90%86"><span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%B3%A8%E5%85%A5%E7%9A%84application%E7%B1%BB"><span class="toc-text"> 删除注入的Application类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86-2"><span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-text"> 处理方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8Dapplication%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-text"> 恢复Application类的继承关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E7%90%86-3"><span class="toc-text"> 原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95-2"><span class="toc-text"> 处理方法</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E8%A6%81%E8%AF%95%E6%89%8B"><span class="toc-text"> 如果你要试手</span></a></li></ol>
 </div>
     
     
