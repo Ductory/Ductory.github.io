@@ -14,7 +14,7 @@
 <meta property="og:description" content="本文将简要地介绍SEH最基础的内容以及tcc自带的SEH，并用宏为tcc实现一个类VC6的try-except-finally扩展和一个try-catch-finally扩展。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-11-19T06:17:23.000Z">
-<meta property="article:modified_time" content="2024-04-30T16:02:11.653Z">
+<meta property="article:modified_time" content="2024-07-27T16:00:01.357Z">
 <meta property="article:author" content="Dangfer">
 <meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
@@ -81,8 +81,8 @@
   <div class="article-meta">
     <a href="/2023/11/19/%E8%AE%A9tcc%E7%94%A8%E4%B8%8ASEH/" class="article-date">
   <time class="dt-published" datetime="2023-11-19T06:17:23.000Z" itemprop="datePublished">2023-11-19</time>
-  <time class="dt-updated" datetime="2024-04-30T16:02:11.653Z" itemprop="dateUpdated">
-     (UPDATED 2024-05-01)
+  <time class="dt-updated" datetime="2024-07-27T16:00:01.357Z" itemprop="dateUpdated">
+     (UPDATED 2024-07-28)
   </time>
 </a>
     
@@ -150,6 +150,8 @@
 <p>在这个demo里，由于<code>scanf</code>中故意没写取址符，因此在尝试向0地址写入内容时会触发一个<code>EXCEPTION_ACCESS_VIOLATION</code>异常，被我们的异常处理例程捕获，打印提示信息后继续让其他处理程序去处理异常。</p>
 <p>我们还可以用这两个宏来做一些更有趣的事情，比如实现一个简单的反调试手段：通过设置<code>TF</code>标志位来让程序产生单步断点，在产生单步异常后，我们用异常处理例程处理异常发生地址的内容来实现代码的动态加解密。</p>
 <p>如果诸位吃饱了撑着可以尝试一下我写的一个简单的注册机demo，源代码和解析会放在文章的最后。</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://dangfer.lanzoum.com/irxXB1fcucbc">reg.exe (lanzoum.com)</a></p>
+<p>密码：1234</p>
 <h2 id="扩展seh"><a class="markdownIt-Anchor" href="#扩展seh"></a> 扩展SEH</h2>
 <p><span style='color:red'>这里是之前的内容，是try-except-finally的实现，并不好用，且更为复杂。不感兴趣的话可以直接转到<strong>更简单的SEH宏</strong>。</span></p>
 <p>也许有人会说，SEH的作用实在有限啊，这样怎么实现try-except-finally？事实上这是因为基本的SEH帧包含的信息太少了，我们只需扩展一下<code>EXCEPTION_REGISTRATION</code>结构，便能做很多事情了。接下来让我们扩展这个结构并先实现类VC的try-except扩展，然后再实现try-except-finally。</p>
@@ -343,7 +345,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reverse/" rel="tag">reverse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" rel="tag">资源分享</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algorithm/" rel="tag">Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structure/" rel="tag">Data Structure</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reverse/" rel="tag">reverse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" rel="tag">资源分享</a></li></ul>
     </div>
   </div>
 
@@ -353,7 +355,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/reverse/" style="font-size: 10px;">reverse</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 10px;">资源分享</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/reverse/" style="font-size: 10px;">reverse</a> <a href="/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/" style="font-size: 10px;">资源分享</a>
     </div>
   </div>
 
